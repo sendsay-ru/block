@@ -1,0 +1,33 @@
+{
+  "name": "block",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sendsay-ru/block",
+  "authors": [
+    "zoux <zouxuoz@gmail.com>"
+  ],
+  "description": "Extended Backbone View",
+  "main": "src/block.js",
+  "keywords": [
+    "block",
+    "view",
+    "backbone",
+    "extened"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.3",
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "deepExtend": "https://github.com/borovin/deepExtend.git#^1.0.0",
+    "makeClass": "https://github.com/borovin/makeClass.git#^1.0.0",
+    "get": "https://github.com/borovin/get.git#^1.0.0",
+    "set": "https://github.com/borovin/set.git#^1.0.0"
+  }
+}
