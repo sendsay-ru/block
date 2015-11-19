@@ -25,9 +25,7 @@
     "backbone": "~1.2.3",
     "jquery": "~2.1.4",
     "lodash": "~3.10.1",
-    "deepExtend": "https://github.com/borovin/deepExtend.git#^1.0.0",
-    "makeClass": "https://github.com/borovin/makeClass.git#^1.0.0",
-    "get": "https://github.com/borovin/get.git#^1.0.0",
-    "set": "https://github.com/borovin/set.git#^1.0.0"
+    "get": "https://github.com/borovin/get.git#ffa9b9e6c1136c08d9e261acfdcd91aa57795ed3",
+    "set": "https://github.com/borovin/set.git#3f03cd23338b24abd6ab43155eeecee19fed6c94"
   }
 }
