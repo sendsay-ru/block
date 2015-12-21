@@ -116,6 +116,7 @@
 
             if (block.template) {
                 block.setElement(block.template());
+                block.prerender && block.prerender();
                 $el && $el.replaceWith(block.el);
             }
 
