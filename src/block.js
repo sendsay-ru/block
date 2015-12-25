@@ -106,6 +106,11 @@
         children: {},
         template: null,
 
+        prerender: function() {
+            if(this.mark)
+                this.$el.addClass("js-" + this.mark);
+        },
+
         render: function() {
 
             var block = this,
