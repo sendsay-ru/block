@@ -23,7 +23,15 @@
                 if (_.isPlainObject(value)) {
                     object[key] = merge({}, object[key], value);
                 } else if (_.isArray(value)) {
-                    object[key] = _.cloneDeep(value);
+                    object[key] = _.map(value, function(temp) {
+                        if (_.isPlainObject(temp)) {
+                            return merge({}, value, temp);
+                        } else if (_.isArray(temp)) {
+                            return merge({}, value, temp);
+                        } else {
+                            return temp;
+                        }
+                    });
                 } else {
                     object[key] = value;
                 }
