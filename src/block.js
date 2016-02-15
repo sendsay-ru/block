@@ -25,9 +25,9 @@
                 } else if (_.isArray(value)) {
                     object[key] = _.map(value, function(temp) {
                         if (_.isPlainObject(temp)) {
-                            return merge({}, value, temp);
+                            return merge({}, undefined, temp);
                         } else if (_.isArray(temp)) {
-                            return merge({}, value, temp);
+                            return merge([], undefined, temp);
                         } else {
                             return temp;
                         }
