@@ -344,6 +344,8 @@
 
             var block = this;
 
+            block.baseClass = baseClass;
+
             return _.reduce(modifiers || block.modifiers || [], function(result, value, name) {
                 if (_.isBoolean(value)) {
                     if (value) {
@@ -354,6 +356,24 @@
                 }
                 return result + ' ' + baseClass + '_' + name + '_' + value;
             }, baseClass);
+        },
+
+        setModifiers: function(modifiers) {
+            var block = this;
+
+            block.modifiers = block.modifiers || {};
+
+            _.each(modifiers, function(value, key) {
+                block.modifiers[key] = value;
+            });
+
+            if (block.$el && block.baseClass) {
+                block.$el.attr('class', block.generateClassName(block.baseClass, block.modifiers));
+
+                if (block.mark) {
+                    block.$el.addClass('js-' + block.mark);
+                }
+            }
         }
 
     });
