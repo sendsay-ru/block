@@ -344,7 +344,7 @@
 
             var block = this;
 
-            block.baseClass = baseClass;
+            block.baseClass = block.baseClass || baseClass;
 
             return _.reduce(modifiers || block.modifiers || [], function(result, value, name) {
                 if (_.isBoolean(value)) {
