@@ -190,7 +190,7 @@
                     });
                 }
 
-                block.trigger(path ? ('change:' + path) : 'change', data);
+                block.trigger.apply(block, [path ? ('change:' + path) : 'change', data].concat(args.slice(3)));
             };
 
             triggerChanges('', changed);
@@ -273,9 +273,10 @@
 
         trigger: function(event, data) {
 
-            var block = this;
+            var block = this,
+                args = [].slice.call(arguments);
 
-            block.$el.trigger(event, data);
+            block.$el.trigger(event, args.slice(1));
 
             return Backbone.View.prototype.trigger.apply(block, arguments);
         },
